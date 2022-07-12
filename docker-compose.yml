@@ -17,8 +17,8 @@ services:
     depends_on:
       - db
     ports:
-      - "80:8069"
-      - "20014:8072" # live chat
+      - "10013:8069"
+      - "20013:8072" # live chat
     tty: true
     command: --
 #    command: odoo scaffold /mnt/extra-addons/test_module
@@ -29,4 +29,4 @@ services:
     volumes:
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
-    restart: always
+    restart: always             # run as a service
